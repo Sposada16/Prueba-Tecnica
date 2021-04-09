@@ -1,0 +1,8 @@
+<div *ngIf="showPosts">
+  <div *ngFor="let post of displayedPosts">
+    <app-post [post]="post"></app-post>
+  </div>
+</div>
+
+<div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()">
+</div>
